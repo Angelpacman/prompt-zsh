@@ -1,0 +1,255 @@
+
+export TERM="xterm-256color"
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+  export ZSH=/home/angelr/.oh-my-zsh
+
+# Set name of the theme to load. Optionally, if you set this to "random"
+# it'll load a random theme each time that oh-my-zsh is loaded.
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+#POWERLEVEL9K_MODE='flat'
+POWERLEVEL9K_MODE='awesome-fontconfig'
+ZSH_THEME="powerlevel9k/powerlevel9k"
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git sudo colored-man colorize zsh-autosuggestions zsh-syntax-highlighting)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/rsa_id"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+
+#POWERLEVEL9K_DIR_OMIT_FIRST_CHARACTER=true
+POWERLEVEL9K_DIR_OMIT_FIRST_CHARACTER=true
+
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context os_icon dir dir_writable  rbenv vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs battery time )  #status
+
+POWERLEVEL9K_FOLDER_ICON=" "
+POWERLEVEL9K_HOME_ICON=" "
+POWERLEVEL9K_HOME_SUB_ICON=" "
+POWERLEVEL9K_LOCK_ICON=''
+#POWERLEVEL9K_DIR_PATH_SEPARATOR="$(print_icon "LEFT_SUBSEGMENT_SEPARATOR" ) "
+POWERLEVEL9K_DIR_PATH_SEPARATOR="$(print_icon "LEFT_SUBSEGMENT_SEPARATOR")"
+
+#POWERLEVEL9K_<name-of-segment>_<state>_[BACKGROUND|FOREGROUND].
+POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_FOREGROUND='196'
+POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_BACKGROUND='232'
+
+#POWERLEVEL9K_OS_ICON_FOREGROUND='232'
+#POWERLEVEL9K_OS_ICON_BACKGROUND='green'
+
+
+#prompt line
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+
+POWERLEVEL9K_STATUS_OK_FOREGROUND='black'
+POWERLEVEL9K_STATUS_OK_BACKGROUND='202'   #rosa162
+
+
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='255' #negro232
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='020' #amarillo184 azul033 azul020
+
+POWERLEVEL9K_DIR_HOME_FOREGROUND='black'
+POWERLEVEL9K_DIR_HOME_BACKGROUND='178' #184
+
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='black'
+POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='178' #184
+
+POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='black'
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='178' #184
+
+
+POWERLEVEL9K_TIME_FOREGROUND='white'
+POWERLEVEL9K_TIME_BACKGROUND='055' #naranja208  relojazul037 rosa198 morado162
+#nuevo
+POWERLEVEL9K_TIME_FORMAT="%D{%H:%M }" #:%S # 
+
+
+#battery
+POWERLEVEL9K_BATTERY_ICON=''
+
+POWERLEVEL9K_BATTERY_LOW_FOREGROUND='black'
+POWERLEVEL9K_BATTERY_LOW_BACKGROUND='196'
+
+POWERLEVEL9K_BATTERY_CHARGING_FOREGROUND='black'
+POWERLEVEL9K_BATTERY_CHARGING_BACKGROUND='034'  #green040
+
+POWERLEVEL9K_BATTERY_CHARGED_FOREGROUND='black'
+POWERLEVEL9K_BATTERY_CHARGED_BACKGROUND='034'   #green040
+
+POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND='black'
+POWERLEVEL9K_BATTERY_DISCONNECTED_BACKGROUND='034' #green040
+
+POWERLEVEL9K_BATTERY_STAGES="▁▂▃▄▅▆▇█"
+POWERLEVEL9K_BATTERY_STAGES=($'▁ ' $'▂ ' $'▃ ' $'▄ ' $'▅ ' $'▆ ' $'▇ ' $'█ ')
+POWERLEVEL9K_BATTERY_STAGES=(
+   $'▏    ▏' $'▎    ▏' $'▍    ▏' $'▌    ▏' $'▋    ▏' $'▊    ▏' $'▉    ▏' $'█    ▏'
+   $'█▏   ▏' $'█▎   ▏' $'█▍   ▏' $'█▌   ▏' $'█▋   ▏' $'█▊   ▏' $'█▉   ▏' $'██   ▏'
+   $'██   ▏' $'██▎  ▏' $'██▍  ▏' $'██▌  ▏' $'██▋  ▏' $'██▊  ▏' $'██▉  ▏' $'███  ▏'
+   $'███  ▏' $'███▎ ▏' $'███▍ ▏' $'███▌ ▏' $'███▋ ▏' $'███▊ ▏' $'███▉ ▏' $'████ ▏'
+   $'████ ▏' $'████▎▏' $'████▍▏' $'████▌▏' $'████▋▏' $'████▊▏' $'████▉▏' $'█████▏' )
+
+#POWERLEVEL9K_BATTERY_STAGES=($'\u2581 ' $'\u2582 ' $'\u2583 ' $'\u2584 ' $'\u2585 ' $'\u2586 ' $'\u2587 ' $'\u2588 ')
+POWERLEVEL9K_BATTERY_LEVEL_BACKGROUND=(196 202 208 214 220 226 190 154 118 82 46)
+
+
+#multilineas del prompt izquierdo
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="\n"
+ local user_symbol="$"
+    if [[ $(print -P "%#") =~ "#" ]]; then
+        user_symbol = "#"
+    fi
+POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%{%B%F{250}%K{238}%}     %{%b%f%k%F{238}%}%{%f%}   $user_symbol " #dentro de ambos corchetes {} iba rosa 197
+
+#vcs
+POWERLEVEL9K_VCS_GIT_ICON=' '
+POWERLEVEL9K_VCS_CLEAN_FOREGROUND='082'
+POWERLEVEL9K_VCS_CLEAN_BACKGROUND='black,bold'
+POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='166'
+POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='black'
+POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='001'
+POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='232'
+
+#highlights
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+ZSH_HIGHLIGHT_STYLES[cursor]='bold'
+
+#ZSH_HIGHLIGHT_STYLES[alias]='fg=blue,bold'
+#ZSH_HIGHLIGHT_STYLES[suffix-alias]='fg=green,bold'
+#ZSH_HIGHLIGHT_STYLES[builtin]='fg=green,bold'
+#ZSH_HIGHLIGHT_STYLES[function]='fg=blue,bold'
+#ZSH_HIGHLIGHT_STYLES[command]='fg=magenta,bold'
+#ZSH_HIGHLIGHT_STYLES[precommand]='fg=yellow,bold'
+#ZSH_HIGHLIGHT_STYLES[hashed-command]='fg=red,bold'
+
+ZSH_HIGHLIGHT_STYLES[default]=none
+ZSH_HIGHLIGHT_STYLES[unknown-token]=fg=005
+ZSH_HIGHLIGHT_STYLES[reserved-word]=fg=005,standout
+ZSH_HIGHLIGHT_STYLES[alias]=fg=082,bold
+ZSH_HIGHLIGHT_STYLES[builtin]=fg=082,bold
+ZSH_HIGHLIGHT_STYLES[function]=fg=009,bold
+ZSH_HIGHLIGHT_STYLES[command]=fg=208,bold                 #azulcyan 051
+ZSH_HIGHLIGHT_STYLES[precommand]=fg=082,underline
+ZSH_HIGHLIGHT_STYLES[commandseparator]=none
+ZSH_HIGHLIGHT_STYLES[hashed-command]=fg=009
+ZSH_HIGHLIGHT_STYLES[path]=fg=051,underline
+ZSH_HIGHLIGHT_STYLES[globbing]=fg=063
+ZSH_HIGHLIGHT_STYLES[history-expansion]=fg=white,underline  #white original
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=none
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=none
+ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=none
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=063
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=214
+ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=001
+ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=001
+ZSH_HIGHLIGHT_STYLES[assign]=none
+
+
+
+
+export PATH=/home/angelr/anaconda3/bin:$PATH
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+export LD_LIBRARY_PATH=/usr/local/lib
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+
+# added by Anaconda3 4.4.0 installer
+export PATH="/home/angelr/anaconda3/bin:$PATH"
+
+#agregado por mi para configurar la variable de entorno java oracle
+
+export PATH="$PATH:HOME/.jdk1.8.0_131/jre/bin"
+export PATH="$PATH:HOME/.jdk1.8.0_131/bin"
+
+
+
+
+#agragado para Android Studio
+export PATH="$PATH:/usr/local/android-studio/bin"
+
+
+
+#agregado para nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+#powerline
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /home/angelr/anaconda3/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
