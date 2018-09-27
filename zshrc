@@ -4,13 +4,13 @@ export TERM="xterm-256color"
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/angelr/.oh-my-zsh
+export ZSH=/home/angelr/.oh-my-zsh
   
 #iniciar tmux por defecto, para desactivar el inicio de tmux hay que descomentar
 #las lineas desde el if hasta el fi
-#if command -v tmux>/dev/null; then
-#  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
-#fi
+if command -v tmux>/dev/null; then
+  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+fi
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -106,10 +106,10 @@ source $ZSH/oh-my-zsh.sh
 POWERLEVEL9K_DIR_OMIT_FIRST_CHARACTER=true
 
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context os_icon dir dir_writable  rbenv vcs status )
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs ram battery time )  #status
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs ram battery time )  #status battery
 
 POWERLEVEL9K_FOLDER_ICON=" "
-POWERLEVEL9K_HOME_ICON=" "
+POWERLEVEL9K_HOME_ICON=" home "
 POWERLEVEL9K_HOME_SUB_ICON=" "  #$(print_icon "LEFT_SUBSEGMENT_SEPARATOR")
 POWERLEVEL9K_LOCK_ICON=''
 POWERLEVEL9K_DIR_PATH_SEPARATOR="$(print_icon "LEFT_SUBSEGMENT_SEPARATOR")"
@@ -146,17 +146,18 @@ POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='178' #amarillo184 amarillo178  verde106
 
 #reloj
 POWERLEVEL9K_TIME_FOREGROUND='black'
-POWERLEVEL9K_TIME_BACKGROUND='034' #morado055 naranja208  relojazul037 rosa198 morado162 magenta197 amarillo 178 gris101
+POWERLEVEL9K_TIME_BACKGROUND='208' #morado055 naranja208  relojazul037 rosa198 morado162 magenta197 amarillo 178 gris101
 #nuevo
 POWERLEVEL9K_TIME_FORMAT="%D{%H:%M }" #:%S #
 #POWERLEVEL9K_TIME_FORMAT="%D{%H:%M :%S %d/%m/%Y}"
 
 #Ram
 POWERLEVEL9K_RAM_ICON='\uf1fe ' #\ue7c6'
-POWERLEVEL9K_RAM_BACKGROUND="037" #naranja208
+POWERLEVEL9K_RAM_BACKGROUND="038" #naranja208
 POWERLEVEL9K_RAM_FOREGROUND="232"
 POWERLEVEL9K_RAM_VISUAL_IDENTIFIER_COLOR="232"
 POWERLEVEL9K_RAM_ELEMENTS=(ram_free)
+
 
 #battery
 #POWERLEVEL9K_BATTERY_ICON=''
@@ -165,13 +166,13 @@ POWERLEVEL9K_BATTERY_ICON='' #\ue7c6'    #'\uf241\ue7c6'     #'\uf241 |'
 POWERLEVEL9K_BATTERY_LOW_FOREGROUND='black'
 POWERLEVEL9K_BATTERY_LOW_BACKGROUND='196'
 
-POWERLEVEL9K_BATTERY_CHARGING_FOREGROUND='034'		#cyan037
+POWERLEVEL9K_BATTERY_CHARGING_FOREGROUND='038'		#cyan037
 POWERLEVEL9K_BATTERY_CHARGING_BACKGROUND='black'  #green040
 
-POWERLEVEL9K_BATTERY_CHARGED_FOREGROUND='034'		#cyan037
+POWERLEVEL9K_BATTERY_CHARGED_FOREGROUND='038'		#cyan037
 POWERLEVEL9K_BATTERY_CHARGED_BACKGROUND='black'   #green040
 
-POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND='034'		#cyan037
+POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND='038'		#cyan037
 POWERLEVEL9K_BATTERY_DISCONNECTED_BACKGROUND='black' #green040
 
 #POWERLEVEL9K_BATTERY_STAGES="▁▂▃▄▅▆▇█"
@@ -250,6 +251,13 @@ ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=006  #original rojo001
 ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=006    #original rojo001
 ZSH_HIGHLIGHT_STYLES[assign]=bg=197        #  none
 
+#custom comands
+#f81f
+POWERLEVEL9K_CUSTOM_PYTHON="echo -n '\uf81f' Python"
+POWERLEVEL9K_CUSTOM_PYTHON_FOREGROUND="black"
+POWERLEVEL9K_CUSTOM_PYTHON_BACKGROUND="blue"
+
+
 #acortadores de directorios en prompt principal
 #POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 #POWERLEVEL9K_SHORTEN_DELIMITER=".."
@@ -277,7 +285,7 @@ export PATH="$PATH:HOME/.jdk1.8.0_131/bin"
 
 
 #agragado para Android Studio
-export PATH="$PATH:/usr/local/android-studio/bin"
+#export PATH="$PATH:/usr/local/android-studio/bin"
 
 
 
@@ -303,3 +311,4 @@ export seisan=/home/angelr/Seisan/COM/SEISAN.bash
 #seismic unix
 export CWPROOT=~/cwp/SeisUnix
 export PATH=$PATH:~/cwp/SeisUnix/bin
+
