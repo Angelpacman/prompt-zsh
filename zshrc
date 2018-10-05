@@ -67,7 +67,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(sudo archlinux tmux colored-man colorize sublime battery zsh-autosuggestions zsh-syntax-highlighting) #git
+plugins=(sudo archlinux colored-man colorize sublime battery zsh-autosuggestions zsh-syntax-highlighting) #git tmux
 
 source $ZSH/oh-my-zsh.sh
 
@@ -105,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 #POWERLEVEL9K_DIR_OMIT_FIRST_CHARACTER=true
 POWERLEVEL9K_DIR_OMIT_FIRST_CHARACTER=true
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context os_icon dir dir_writable  rbenv vcs status )
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context os_icon dir dir_writable  rbenv vcs status anaconda )
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs ram battery time )  #status battery
 
 POWERLEVEL9K_FOLDER_ICON=" "
@@ -119,6 +119,14 @@ POWERLEVEL9K_DIR_PATH_SEPARATOR="$(print_icon "LEFT_SUBSEGMENT_SEPARATOR")"
 POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_FOREGROUND='196'
 POWERLEVEL9K_DIR_WRITABLE_FORBIDDEN_BACKGROUND='232'
 
+#anaconda enviroments
+POWERLEVEL9K_ANACONDA_LEFT_DELIMITER=''
+POWERLEVEL9K_ANACONDA_RIGHT_DELIMITER=''
+POWERLEVEL9K_PYTHON_ICON='\uf135 '  #e63c
+POWERLEVEL9K_ANACONDA_BACKGROUND='070'  #lime106
+POWERLEVEL9K_ANACONDA_FOREGROUND='232'
+
+POWERLEVEL9K_OS_ICON='\uf17c '
 #POWERLEVEL9K_OS_ICON_FOREGROUND='232'
 #POWERLEVEL9K_OS_ICON_BACKGROUND='green'
 
@@ -197,15 +205,15 @@ POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="\n"
 #POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%{%B%F{250}%K{238}%}     %{%b%f%k%F{238}%}%{%f%}   $user_symbol " #dentro de ambos corchetes {} iba rosa 197
 #POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%{%B%F{250}%K{238}%}     %{%b%f%k%F{238}%}%{%f%}   $user_symbol " #dentro de ambos corchetes {} iba rosa 197
 POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{250}%K{238}%}     %{%b%f%k%F{238}%}%{%f%}   $user_symbol " #dentro de ambos corchetes {} iba rosa 197
-
+# esta cochinada no sirve xdxd POWERLEVEL9K_MULTILINE_LAST_PROMPT_ELEMENTS=(anaconda)
 
 #vcs
 POWERLEVEL9K_VCS_GIT_ICON=' '
 POWERLEVEL9K_VCS_CLEAN_FOREGROUND='042'	#verde082 #azul051
 POWERLEVEL9K_VCS_CLEAN_BACKGROUND='black,bold'
-POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='197' #naranja166 mora165
+POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='197' #naranja166
 POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='black'
-POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='165'   #rojo001  mora197
+POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='165'   #rojo001
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='232'
 
 #highlights
