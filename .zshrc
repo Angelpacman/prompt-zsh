@@ -108,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 #POWERLEVEL9K_DIR_OMIT_FIRST_CHARACTER=true
 POWERLEVEL9K_DIR_OMIT_FIRST_CHARACTER=true
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context os_icon dir dir_writable rbenv status anaconda virtualenv vcs) #context
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context status dir dir_writable rbenv anaconda virtualenv vcs) #context
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs docker_machine ram load time )  #status battery load custom_wifi_signal ram
 
 POWERLEVEL9K_FOLDER_ICON=""
@@ -141,10 +141,10 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
-POWERLEVEL9K_STATUS_OK_FOREGROUND='162'
-POWERLEVEL9K_STATUS_OK_BACKGROUND='232'   #rosa162
+POWERLEVEL9K_STATUS_OK_FOREGROUND='040'		#162' 
+POWERLEVEL9K_STATUS_OK_BACKGROUND='233'   #rosa162
 POWERLEVEL9K_STATUS_ERROR_FOREGROUND='160'
-POWERLEVEL9K_STATUS_ERROR_BACKGROUND='232'   #rosa162
+POWERLEVEL9K_STATUS_ERROR_BACKGROUND='233'   #rosa162
 
 
 
@@ -212,7 +212,8 @@ POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="\n"
     fi
 #POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%{%B%F{250}%K{238}%}     %{%b%f%k%F{238}%}%{%f%}   $user_symbol " #dentro de ambos corchetes {} iba rosa 197
 #POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%{%B%F{250}%K{238}%}     %{%b%f%k%F{238}%}%{%f%}   $user_symbol " #dentro de ambos corchetes {} iba rosa 197
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{250}%K{236}%}     %{%b%f%k%F{236}%}%{%f%}   $user_symbol " #dentro de ambos corchetes {} iba rosa 197
+##POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{250}%K{236}%}     %{%b%f%k%F{236}%}%{%f%}   $user_symbol " #dentro de ambos corchetes {} iba rosa 197
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{040}%K{233}%} \uf312  KDE %{%b%f%k%F{233}%}%{%f%}   $user_symbol "
 # esta cochinada no sirve xdxd POWERLEVEL9K_MULTILINE_LAST_PROMPT_ELEMENTS=(anaconda)
 
 #vcs
