@@ -72,7 +72,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(sudo archlinux colorize sublime battery zsh-autosuggestions zsh-syntax-highlighting) #git tmux colored-man
+plugins=(sudo archlinux colorize sublime battery zsh-autosuggestions zsh-syntax-highlighting docker docker-compose) #git tmux colored-man
 
 source $ZSH/oh-my-zsh.sh
 
@@ -108,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 #POWERLEVEL9K_DIR_OMIT_FIRST_CHARACTER=true
 POWERLEVEL9K_DIR_OMIT_FIRST_CHARACTER=true
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context status dir dir_writable rbenv anaconda virtualenv vcs) #context
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir dir_writable rbenv anaconda virtualenv vcs) #context status
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(root_indicator background_jobs docker_machine ram load time )  #status battery load custom_wifi_signal ram
 
 POWERLEVEL9K_FOLDER_ICON=""
@@ -148,32 +148,35 @@ POWERLEVEL9K_STATUS_ERROR_BACKGROUND='233'   #rosa162
 
 
 
-POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='255' #negro232 blanco255-254
-POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='018' #amarillo184 azul033 azulrey020 #037 azul027-024-025
+POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='254' #negro232 blanco255-254
+POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='0018' #amarillo184 azul033 azulrey020 #037 azul027-024-025  018 063 044
 
 POWERLEVEL9K_DIR_HOME_FOREGROUND='232' #black232
-POWERLEVEL9K_DIR_HOME_BACKGROUND='178' #amarillo184 amarillo178 verde106
+POWERLEVEL9K_DIR_HOME_BACKGROUND='178' #amarillo184 amarillo178 verde106 178
 
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='232' #black232
 POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='178' #amarillo184 amarillo178 verde106
 
 POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='232' #black232
-POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='178' #amarillo184 amarillo178  verde106
+POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='239' #amarillo184 amarillo178  verde106
 
 #reloj
 POWERLEVEL9K_TIME_FOREGROUND='black'
-POWERLEVEL9K_TIME_BACKGROUND='208' #morado055 naranja208  relojazul037 rosa198 morado162 magenta197 amarillo 178 gris101  167 o 197 106 161
+POWERLEVEL9K_TIME_BACKGROUND='035' #morado055 naranja208  relojazul037 rosa198 morado162 magenta197 amarillo 178 gris101  167 o 197 106 161
 #nuevo
 POWERLEVEL9K_TIME_FORMAT="%D{%H:%M}" #:%S # # 
 #POWERLEVEL9K_TIME_FORMAT="%D{%H:%M :%S %d/%m/%Y}"
 
 #Ram
 POWERLEVEL9K_RAM_ICON='\uf1fe ' #\ue7c6'
-POWERLEVEL9K_RAM_BACKGROUND="038" #naranja208 cyan0-3-8
-POWERLEVEL9K_RAM_FOREGROUND="232"
+POWERLEVEL9K_RAM_BACKGROUND="055" #naranja208 cyan0-3-8 240
+POWERLEVEL9K_RAM_FOREGROUND="230" #232
 POWERLEVEL9K_RAM_VISUAL_IDENTIFIER_COLOR="232"
 POWERLEVEL9K_RAM_ELEMENTS=(ram_free)
 
+#load
+POWERLEVEL9K_LOAD_NORMAL_FOREGROUND='048'       #cyan037 cyan0-3-8 gris240
+POWERLEVEL9K_LOAD_NORMAL_BACKGROUND='232'   #green040
 
 #battery
 #POWERLEVEL9K_BATTERY_ICON=''
@@ -191,18 +194,6 @@ POWERLEVEL9K_BATTERY_CHARGED_BACKGROUND='black'   #green040
 POWERLEVEL9K_BATTERY_DISCONNECTED_FOREGROUND='038'		#cyan037 cyan0-3-8
 POWERLEVEL9K_BATTERY_DISCONNECTED_BACKGROUND='black' #green040
 
-#POWERLEVEL9K_BATTERY_STAGES="▁▂▃▄▅▆▇█"
-#POWERLEVEL9K_BATTERY_STAGES=($'▁ ' $'▂ ' $'▃ ' $'▄ ' $'▅ ' $'▆ ' $'▇ ' $'█ ')
-#POWERLEVEL9K_BATTERY_STAGES=(
-#   $'▏    ▏' $'▎    ▏' $'▍    ▏' $'▌    ▏' $'▋    ▏' $'▊    ▏' $'▉    ▏' $'█    ▏'
-#   $'█▏   ▏' $'█▎   ▏' $'█▍   ▏' $'█▌   ▏' $'█▋   ▏' $'█▊   ▏' $'█▉   ▏' $'██   ▏'
-#   $'██   ▏' $'██▎  ▏' $'██▍  ▏' $'██▌  ▏' $'██▋  ▏' $'██▊  ▏' $'██▉  ▏' $'███  ▏'
-#   $'███  ▏' $'███▎ ▏' $'███▍ ▏' $'███▌ ▏' $'███▋ ▏' $'███▊ ▏' $'███▉ ▏' $'████ ▏'
-#   $'████ ▏' $'████▎▏' $'████▍▏' $'████▌▏' $'████▋▏' $'████▊▏' $'████▉▏' $'█████▏' )
-
-#POWERLEVEL9K_BATTERY_STAGES=($'\u2581 ' $'\u2582 ' $'\u2583 ' $'\u2584 ' $'\u2585 ' $'\u2586 ' $'\u2587 ' $'\u2588 ')
-#POWERLEVEL9K_BATTERY_LEVEL_BACKGROUND=(196 202 208 214 220 226 190 154 118 82 46)
-
 
 #multilineas del prompt izquierdo
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="\n"
@@ -213,16 +204,16 @@ POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="\n"
 #POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%{%B%F{250}%K{238}%}     %{%b%f%k%F{238}%}%{%f%}   $user_symbol " #dentro de ambos corchetes {} iba rosa 197
 #POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%{%B%F{250}%K{238}%}     %{%b%f%k%F{238}%}%{%f%}   $user_symbol " #dentro de ambos corchetes {} iba rosa 197
 ##POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{250}%K{236}%}     %{%b%f%k%F{236}%}%{%f%}   $user_symbol " #dentro de ambos corchetes {} iba rosa 197
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{040}%K{233}%} \uf312  KDE %{%b%f%k%F{233}%}%{%f%}   $user_symbol "
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{%B%F{047}%K{233}%} \uf312  KDE %{%b%f%k%F{233}%}%{%f%}  \uf553   $user_symbol " #243
 # esta cochinada no sirve xdxd POWERLEVEL9K_MULTILINE_LAST_PROMPT_ELEMENTS=(anaconda)
 
 #vcs
 #POWERLEVEL9K_VCS_GIT_ICON='\uf113 ' #
 POWERLEVEL9K_VCS_CLEAN_FOREGROUND='046'	#verde082 #azul051 verde042
 POWERLEVEL9K_VCS_CLEAN_BACKGROUND='black,bold'
-POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='165' #naranja166
+POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='197' #naranja166
 POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='black'
-POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='197'   #rojo001
+POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='165'   #rojo001
 POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='black'     #232
 
 #highlights
@@ -283,15 +274,10 @@ POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 
 
-#load
-POWERLEVEL9K_LOAD_NORMAL_FOREGROUND='038'       #cyan037 cyan0-3-8
-POWERLEVEL9K_LOAD_NORMAL_BACKGROUND='black'   #green040
-
-
 
 #export PATH=/home/angelr/.Anaconda3/bin:$PATH
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
+##export LANG=en_US.UTF-8
+##export LC_ALL=en_US.UTF-8
 
 export LD_LIBRARY_PATH=/usr/local/lib
 export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
@@ -301,14 +287,14 @@ export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 
 #agregado por mi para configurar la variable de entorno java oracle
 
-export PATH="$PATH:HOME/.jdk1.8.0_131/jre/bin"
-export PATH="$PATH:HOME/.jdk1.8.0_131/bin"
+#export PATH="$PATH:HOME/.jdk1.8.0_131/jre/bin"
+#export PATH="$PATH:HOME/.jdk1.8.0_131/bin"
 
 
 
 
 #agragado para Android Studio
-export PATH="$PATH:/usr/local/android-studio/bin"
+#export PATH="$PATH:/usr/local/android-studio/bin"
 
 
 
@@ -320,23 +306,23 @@ export NVM_DIR="$HOME/.nvm"
 #powerline-daemon -q
 #POWERLINE_BASH_CONTINUATION=1
 #POWERLINE_BASH_SELECT=1
-#. /home/angelr/anaconda3/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh
+#. /home/angelr/.Anaconda3/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh
 
 
 export GIO_EXTRA_MODULES=/usr/lib/x86_64-linux-gnu/gio/modules/
 
 
 #para seisan
-seisan=/home/angelr/Seisan/COM/SEISAN.bash
-export seisan=/home/angelr/Seisan/COM/SEISAN.bash
-export PATH=$PATH:~/Seisan/COM/SEISAN.bash
+#seisan=/home/angelr/Seisan/COM/SEISAN.bash
+#export seisan=/home/angelr/Seisan/COM/SEISAN.bash
+#export PATH=$PATH:~/Seisan/COM/SEISAN.bash
 
 
 
 
 #seismic unix
-export CWPROOT=~/cwp/SeisUnix
-export PATH=$PATH:~/cwp/SeisUnix/bin
+#export CWPROOT=~/cwp/SeisUnix
+#export PATH=$PATH:~/cwp/SeisUnix/bin
 
 
 
@@ -354,17 +340,26 @@ export PATH=$PATH:~/cwp/SeisUnix/bin
 
 
 #Exportando ruby para una aplicacion gem "ls colors"
-export PATH=${PATH}:/home/angelr/.gem/ruby/2.7.0/bin
-##file necesario para  gem ls colors
-source $(dirname $(gem which colorls))/tab_complete.sh
-###abreviacion de colorls
-alias l='colorls -lA --sd --report'
-alias ls='colorls --group-directories-first --report'
-alias lt='colorls --tree'
+export PATH=${PATH}:/home/angelr/.gem/ruby/2.7.0/bin  ###
+#file necesario para  gem ls colors
+source $(dirname $(gem which colorls))/tab_complete.sh  ###
+#abreviacion de colorls
+########alias l='colorls -lA --sd'  ###
+alias l='ls -l'
+##alias ls='colorls --group-directories-first --report'
+alias ls='colorls --group-directories-first'  ###
+alias lt='colorls --tree'  ###
 
+###COLORS EN LS
 #ls colors onstlado desde: $ yaourt  lscolors-git
 #ó alternativamente(mejor): wget https://raw.github.com/trapd00r/LS_COLORS/master/LS_COLORS -O $HOME/.dircolors
-eval $(dircolors -b $HOME/.dircolors)
+##eval $(dircolors -b $HOME/.dircolors)
+
+#Este otro tema se instala mas facil con sudo pacman -S vivid
+export LS_COLORS="$(vivid generate molokai)"
+
+
+
 
 
 ##peliculas Hereditary, mandy, suspiria
@@ -375,17 +370,17 @@ eval $(dircolors -b $HOME/.dircolors)
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/angelr/.Anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)" ##
-if [ $? -eq 0 ]; then ##
-    eval "$__conda_setup" ##
-else ##
-    if [ -f "/home/angelr/.Anaconda3/etc/profile.d/conda.sh" ]; then ##
-        . "/home/angelr/.Anaconda3/etc/profile.d/conda.sh" ##
-    else ##
-        export PATH="/home/angelr/.Anaconda3/bin:$PATH" ##
-    fi ##
-fi ##
-unset __conda_setup ##
+__conda_setup="$('/home/angelr/.Anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"    ##
+if [ $? -eq 0 ]; then    ##
+    eval "$__conda_setup"    ##
+else    ##
+    if [ -f "/home/angelr/.Anaconda3/etc/profile.d/conda.sh" ]; then    ##
+        . "/home/angelr/.Anaconda3/etc/profile.d/conda.sh"    ##
+    else    ##
+        export PATH="/home/angelr/.Anaconda3/bin:$PATH"    ##
+    fi    ##
+fi    ##
+unset __conda_setup    ##
 # <<< conda initialize <<<
 
 
@@ -401,3 +396,11 @@ POWERLEVEL9K_CONTEXT_TEMPLATE="%n@`hostname -f`"
 
 
 #cowsay -f milk hey, los burritos son alimento siono raza 
+
+
+
+
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /usr/lib/python3.8/site-packages/powerline/bindings/bash/powerline.sh
