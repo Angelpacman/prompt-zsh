@@ -1,0 +1,14 @@
+# Adria
+[colors]
+#foreground = "#514968"
+foreground = "#606060"
+#background = "#262626"
+background = "#111111"
+cursor_bg = "#524966"
+cursor_border = "#524966"
+cursor_fg = "#100613"
+selection_bg = "#1f1d2b"
+selection_fg = "#a593cd"
+
+ansi = ["#241f2b","#e06c75","#98c379","#b49d27","#61afef","#c678dd","#56b6c2","#524966"]
+brights = ["#312d3d","#d5356c","#2cd946","#fde83b","#90baf9","#a479e3","#acd4eb","#9e8cbd"]
